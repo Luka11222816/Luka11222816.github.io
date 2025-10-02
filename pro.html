@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luka gallery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+        crossorigin="anonymous">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Sriracha&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
+        crossorigin="anonymous"></script>
+    <style>
+        li{
+            font-family: "Winky Sans", sans-serif;  
+        }
+        .header {
+            background-color: rgb(164, 219, 255);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            padding: 15px;
+            font-size: 20px;
+            z-index: 1000; /* ทำให้ header อยู่เหนือเนื้อหาอื่น */
+        }
+        .box {
+            transition: transform 0.5s ease-in-out;
+        }
+        .box1 {
+            padding-left: 50px;
+            padding-top: 50px;
+        }
+        .box2 {
+            transition: transform 0.2s ease-in-out;
+        }
+        .box:hover {
+            transform: scale(1.4); 
+        }
+        .box2:hover {
+            transform: scale(1.2); 
+        }
+        .message {
+            display: none; 
+            margin-top: 10px;
+        }
+        body{
+            background-color: rgb(255, 255, 255);
+            background-attachment: fixed;
+            background-size:cover ;
+            background-position:center ;
+            padding-top: 100px; /* ป้องกันเนื้อหาโดน header บัง */
+        }
+        div2 {
+            border: 2px solid rgba(0, 0, 0, 0);  
+            padding: 30px 20px 30px 40px; /* บน,ขวา,ล่าง,ซ้าย*/
+        }
+        h2{
+            font-family: "Sriracha", cursive;
+            padding-top: 40px;
+            padding-left: 50px;
+        }
+        .box3{
+            padding-left: 50px;
+            width:150px;
+            height:100px;
+        }
+        p{
+            padding-right:30px ;
+        }
+    </style>
+</head>
+<body>
+        <nav class="navbar navbar-expand-sm w-100 header">  
+            <div class="container-fluid ">  
+                <a class="navbar-brand me-auto" href="/home.html">
+                    <img width="10%" src="/img_lk/IMG_My_st_ok.PNG" alt="luka_logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="navbar-nav ms-auto"> 
+                        <li class="nav-item box"><a class="nav-link" href="/home.html">Home</a></li>
+                        <li class="nav-item box"><a class="nav-link" href="/Droing.html">Art</a></li>
+                        <li class="nav-item box"><a class="nav-link" href="/pro.html">Program</a></li>
+                        <li class="nav-item box"><a class="nav-link" href="/contact.html">photograph</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+<h2>ตัวอย่างโปรแกรมมิ่ง</h2>
+<h4><img class="box3" width="100px" src="https://img.icons8.com/?size=512&id=40670&format=png" alt="">ภาษา C</h4>
+        <div class="row box1">
+            <div2 class="col bg-white bg-opacity-50 padding-20px"><h4>Code</h4>
+                <pre><code> 
+    #include <stdio.h>
+    #include <string.h>
+    char Price(int pr);
+    int main(){
+    int i;
+    for (i=1;i<=5;++i){	
+        int pr;
+        printf("\nMy monney : ");
+        scanf("%d", &pr);
+        Price(pr);
+        }
+    }
+    char Price(int price){
+    char Cha[20];
+    char txt[50];
+    char lod[50];
+                        
+    if (price >= 150){
+        strcpy(Cha,"Fire Tiger");
+        strcpy(txt, "super amazing");
+        strcpy(lod, "15%");
+    }
+    else if(price >= 120){
+        strcpy(Cha,"tiger sugar");
+        strcpy(txt, "amazing");
+        strcpy(lod, "15%");
+    }
+    else if(price >= 100){
+        strcpy(Cha,"Kyo Roll En");
+        strcpy(txt, "The best");
+        strcpy(lod, "15%");
+    }
+    else if(price >= 80){
+        strcpy(Cha,"KOI The");
+        strcpy(txt, "I love it");
+        strcpy(lod, "12%");
+    }
+    else if(price >= 60){
+        strcpy(Cha,"KAMU TEA");
+        strcpy(txt, "Good");
+        strcpy(lod, "12%");
+    }
+    else if(price >= 40){
+        strcpy(Cha,"FUKU Macha");
+        strcpy(txt, "It OK.");
+    }
+    else if(price >= 20){
+        strcpy(Cha,"nobi cha");
+        strcpy(txt, "not bad");
+    }
+    else {
+        strcpy(txt, "My lovely friend I need your help T^T");
+    }
+                    
+    //print area
+    if (price >= 20){
+        printf("Cha : %s \n",strupr(Cha));
+        printf("ahC : %s \n",strrev(Cha));
+        printf("Quantity : %d \n",strlen(Cha));
+    }
+                     
+    if (price >= 100){
+        printf("Sonlod : %s \n",lod);
+        printf("price : %.2f \n",price-(price*0.15));
+    }
+    else if(price >= 60){
+        printf("Sonlod : %s \n",lod);
+        printf("price : %.2f \n",price-(price*0.12));	
+        }
+    else if(price >= 20){
+        printf("price : %d \n",price);	
+    }
+                    
+    printf("txt : %s \n",txt);
+    printf("______________________________________________\n");
+    }
+                </code></pre>  
+            </div2>
+            <div2 class="col bg-dark bg-opacity-60 text-white box1"> <h4>Run</h4>
+                <pre><code>
+My monney : 22
+Cha : NOBI CHA
+ahC : AHC IBON
+Quantity : 8
+price : 22
+txt : not bad
+______________________________________________
+                    
+My monney : 44
+Cha : FUKU MACHA
+ahC : AHCAM UKUF
+Quantity : 10
+price : 44
+txt : It OK.
+______________________________________________
+                    
+My monney : 53
+Cha : FUKU MACHA
+ahC : AHCAM UKUF
+Quantity : 10
+price : 53
+txt : It OK.
+______________________________________________
+                    
+My monney : 190
+Cha : FIRE TIGER
+ahC : REGIT ERIF
+Quantity : 10
+Sonlod : 15%
+price : 161.50
+txt : super amazing
+______________________________________________
+                    
+My monney : 258
+Cha : FIRE TIGER
+ahC : REGIT ERIF
+Quantity : 10
+Sonlod : 15%
+price : 219.30
+txt : super amazing
+_____________________________________________
+                </code></pre>
+                <button class="btn btn-primary box2"onclick="toggleMessage2()">คลิกเพื่อดูคำอธิบายโค้ด</button>
+                <p class="message"id="message">การรับค่า input:
+                    โปรแกรมจะรับค่าราคาจากผู้ใช้ 5 ครั้ง โดยใช้ scanf() เพื่อรับค่าจากผู้ใช้ (ผ่านตัวแปร pr ซึ่งเก็บราคาของเครื่องดื่ม)
+                    
+                    ฟังก์ชัน Price(int price):
+                    ฟังก์ชันนี้รับราคาที่ผู้ใช้ป้อนมาและทำการกำหนดค่าต่างๆ เช่น ชื่อร้าน (Cha), คำอธิบาย (txt), และส่วนลด (lod) ตามเงื่อนไขของราคา
+                    
+                    หากราคามากกว่าหรือเท่ากับ 150 จะได้ร้าน "Fire Tiger" พร้อมคำอธิบาย "super amazing" และส่วนลด 15%
+                    หากราคาต่ำลงมาจะเปลี่ยนชื่อร้านและคำอธิบายไปตามเงื่อนไขที่กำหนด
+                    การคำนวณราคาหลังหักส่วนลด:
+                    หากราคามากกว่าหรือเท่ากับ 100 จะหักส่วนลด 15% จากราคาต้นฉบับ, ถ้าน้อยกว่าก็จะใช้ส่วนลดที่ 12% หรือไม่มีส่วนลดเลยตามที่กำหนด
+                    
+                    การแสดงผล:
+                    โปรแกรมจะแสดงผลลัพธ์ตามเงื่อนไข เช่น:
+                    
+                    ชื่อร้าน (Cha) ในรูปแบบตัวพิมพ์ใหญ่
+                    ชื่อร้านในรูปแบบย้อนกลับ (ใช้ฟังก์ชัน strrev() ซึ่งอาจจะต้องใช้ฟังก์ชันเพิ่มเติมในบางคอมไพเลอร์)
+                    ความยาวของชื่อร้าน (จำนวนตัวอักษรในชื่อร้าน)
+                    ราคาหลังหักส่วนลด
+                    คำอธิบาย (txt)</p>
+                <script>
+                    function toggleMessage2(){
+                        var message = document.getElementById("message");
+                        if (message.style.display==="none" ||message.style.display===""){
+                            message.style.display="block"
+                        }
+                        else{
+                            message.style.display="none"
+                        }
+                    }
+                </script>
+            </div2>
+        </div>
+
+        <h4><img class="box3" width="100px" src="https://python-thailand.github.io/assets/img/python-logo.png" alt="">python</h4>
+        <div class="row box1">
+            <div2 class="col bg-white bg-opacity-50"><h4>Code</h4>
+                <pre><code> 
+    def calculate_money(money,Note1):
+    output = " "
+    if money > 400:
+        output = f"Money : {money}\nUp : {money * 0.35}\nTotal : {(money * 0.35) + money}\n"
+    elif 400 >= money > 300:
+        output = f"Money : {money}\nUp : {money * 0.30}\nTotal : {(money * 0.30) + money}\n"
+    elif 300 >= money > 200:
+        output = f"Money : {money}\nUp : {money * 0.25}\nTotal : {(money * 0.25) + money}\n"
+    elif 200 >= money > 100:
+        output = f"Money : {money}\nUp : {money * 0.20}\nTotal : {(money * 0.20) + money}\n"
+    elif 100 >= money > 50:
+        output = f"Money : {money}\nUp : {money * 0.15}\nTotal : {(money * 0.15) + money}\n"
+    else:
+        output = f"Money : {money}\nUp : {money * 0.10}\nTotal : {(money * 0.10) + money}\n"
+                    
+        with open("C:/Code/Pytont/results.txt", "a+") as file:
+            file.write(output)
+            file.write("NOTE : %s \n" %(Note1))
+            file.write("-------------------------------------\n")
+            print(output)
+        return output
+    print("\n-----------------------INPUT-----------------------\n")
+    detail1 = "Save Monny"
+    detail2 = "for me"
+    print("%s" %(detail1))
+    print("{} {}".format(detail1,detail2))
+    money = int(input("Enter money: "))
+    Note1= input("input note :")
+    result = calculate_money(money,Note1)
+    print("\n-----------------------show-----------------------\n")
+    with open("C:/Code/Pytont/results.txt", "r") as file:
+        content = file.read()
+        print(content)
+                </code></pre>
+            </div2>
+                <div2 class="col bg-dark bg-opacity-60 text-white box1"><h4>Run</h4>
+                <pre><code> 
+-----------------------INPUT-----------------------
+
+Save Monny
+Save Monny for me
+Enter money: 250
+input note :23/2/68
+Money : 250
+Up : 62.5
+Total : 312.5
+
+
+-----------------------show-----------------------
+
+Money : 556
+Up : 194.6
+Total : 750.6
+NOTE : today I'm stong
+-------------------------------------
+Money : 300
+Up : 75.0
+Total : 375.0
+-------------------------------------
+Money : 40
+Up : 4.0
+Total : 44.0
+NOTE : jih
+-------------------------------------
+Money : 250
+Up : 62.5
+Total : 312.5
+NOTE : 23/2/68
+-------------------------------------
+                </code></pre>
+            
+                <button class="btn btn-primary box2"onclick="toggleMessage()">คลิกเพื่อดูคำอธิบายโค้ด</button>
+                    <p class="message"id="message2">
+                        โค้ดนี้เป็นโปรแกรม Python ที่คำนวณการเพิ่มจำนวนเงิน (ขึ้นอยู่กับช่วงของจำนวนเงินที่ป้อน) 
+                        และบันทึกผลลัพธ์ลงในไฟล์ รวมทั้งแสดงผลลัพธ์ในคอนโซลด้วย
+    
+                        โครงสร้างหลักของโค้ด:
+                        ฟังก์ชัน calculate_money(money, Note1)
+                        ฟังก์ชันนี้จะคำนวณส่วนเพิ่ม (up) ตามจำนวนเงินที่ผู้ใช้ป้อนและคำนวณยอดรวม (Total) 
+                        โดยมีเงื่อนไขต่าง ๆ ตามช่วงของจำนวนเงินที่ป้อน:
+                        
+                        หากจำนวนเงินมากกว่า 400 จะเพิ่ม 35% (money * 0.35)
+                        หากจำนวนเงินอยู่ระหว่าง 300 ถึง 400 จะเพิ่ม 30%
+                        หากจำนวนเงินอยู่ระหว่าง 200 ถึง 300 จะเพิ่ม 25%
+                        หากจำนวนเงินอยู่ระหว่าง 100 ถึง 200 จะเพิ่ม 20%
+                        หากจำนวนเงินอยู่ระหว่าง 50 ถึง 100 จะเพิ่ม 15%
+                        หากจำนวนเงินน้อยกว่าหรือเท่ากับ 50 จะเพิ่ม 10%
+                        หลังจากคำนวณแล้ว, โปรแกรมจะบันทึกผลลัพธ์ลงในไฟล์ results.txt และแสดงผลในคอนโซล
+                        
+                        การบันทึกผลลงในไฟล์:
+                        ผลลัพธ์ที่ได้จากการคำนวณจะถูกเขียนลงในไฟล์ C:/Code/Pytont/results.txt พร้อมกับหมายเหตุ 
+                        (Note1) ที่ผู้ใช้ป้อน และใช้ฟังก์ชัน file.write() เพื่อบันทึกข้อมูลลงในไฟล์
+                        </p>
+                    <script>
+                        function toggleMessage(){
+                            var message = document.getElementById("message2");
+                            if (message.style.display==="none" ||message.style.display===""){
+                                message.style.display="block"
+                            }
+                            else{
+                                message.style.display="none"
+                            }
+                        }
+                    </script>
+                </div2>
+        </div>
+            
+    </div>      
+</body>
+</html>
